@@ -1,0 +1,497 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>abbr.ninja API Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-a9fde460.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-1e815a84.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#create-retrieve-uri" class="toc-h1 toc-link" data-title="Create/Retrieve URI">Create/Retrieve URI</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#shorten-uri" class="toc-h2 toc-link" data-title="Shorten URI">Shorten URI</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-original-uri" class="toc-h2 toc-link" data-title="Retrieve Original URI">Retrieve Original URI</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#server-status" class="toc-h1 toc-link" data-title="Server Status">Server Status</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#query-current-server-status" class="toc-h2 toc-link" data-title="Query Current Server Status">Query Current Server Status</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#http-status-codes" class="toc-h1 toc-link" data-title="HTTP Status Codes">HTTP Status Codes</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+            <li><a href="https://abbr.ninja/">Go back to abbr.ninja</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>This document describes the API available. You agree to abide by the terms and conditions by interacting with the API.</p>
+
+<p>Base URL: <code>https://api.abbr.ninja/api/v1</code></p>
+
+<!-- # Rate Limit
+
+Endpoint | Request / minute
+-------- | ----------------
+`/retrieve` | 120
+`/shorten` | 20
+
+`429 Too Many Requests` will be returned if you hit the rate limit. See the [HTTP Codes](#http-status-codes) section for other error codes. -->
+<h1 id='create-retrieve-uri'>Create/Retrieve URI</h1><h2 id='shorten-uri'>Shorten URI</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.abbr.ninja/api/v1/shorten"</span> <span class="se">\</span>
+  <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Content-Type:application/json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{"uri":"https://example.com/longlongstuff"}'</span>
+</code></pre></div>
+<blockquote>
+<p>Response:</p>
+
+<p>200 OK:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aJKjknR"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"html_safe_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/longlongstuff"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"raw_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/longlongstuff"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"encoded_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/longlongstuff"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>400 Bad Request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invalid URI."</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Create a shorten URI from the long URI. <code>id</code> can be used for retrieving the original URI.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /shorten</code></p>
+<h3 id='body'>Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>uri</td>
+<td>The URI to be shorten.</td>
+</tr>
+</tbody></table>
+<h2 id='retrieve-original-uri'>Retrieve Original URI</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.abbr.ninja/api/v1/retrieve?id=aJKjknR"</span>
+</code></pre></div>
+<blockquote>
+<p>Response:</p>
+
+<p>200 OK:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"html_safe_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/longlongstuff"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"raw_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/longlongstuff"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"encoded_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/longlongstuff"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>400 Bad Request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Undefined id."</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>404 Not Found:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="nl">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ID not found."</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves the original URI associated with a valid ID.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /retrieve?id=&lt;ID&gt;</code></p>
+<h3 id='query-string-parameters'>Query String Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID returned when the original URI is shorten.</td>
+</tr>
+</tbody></table>
+<h1 id='server-status'>Server Status</h1><h2 id='query-current-server-status'>Query Current Server Status</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.abbr.ninja/api/v1/status"</span>
+</code></pre></div>
+<blockquote>
+<p>Response:</p>
+
+<p>200 OK:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ok"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Query server status. <code>status</code> can be either <code>Ok</code>, <code>Maintenance</code> or <code>Down</code>.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /status</code></p>
+<h1 id='http-status-codes'>HTTP Status Codes</h1>
+<table><thead>
+<tr>
+<th>Status Code</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>All is well.</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Moved Permanently</td>
+<td>Redirect to the shorten link.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>Your request is invalid.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td>Invalid endpoint or no shortened link.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests</td>
+<td>Rate limited. See the <a href="#rate-limit">rate limit</a> section for more information.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>Server backend issue.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+<td>Server under maintenance.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
