@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 5647a1b87a060f551d5936f3482ec73e2b73cad2
+  revision: 70eb0f2c98081ad4d210d955f3d6984f874c00ba
   branch: 4.x
   specs:
     middleman (4.4.2)
