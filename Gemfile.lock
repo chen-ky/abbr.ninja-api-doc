@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 70eb0f2c98081ad4d210d955f3d6984f874c00ba
+  revision: 8ae4e0a4f7a698927b4b043fd15b19b34cf725f4
   branch: 4.x
   specs:
     middleman (4.4.2)
@@ -101,7 +101,7 @@ GEM
     public_suffix (4.0.6)
     racc (1.6.0)
     rack (2.2.3)
-    rb-fsevent (0.11.0)
+    rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redcarpet (3.5.1)
