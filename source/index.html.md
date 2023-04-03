@@ -38,7 +38,7 @@ Endpoint | Request / minute
 ```shell
 curl "https://api.abbr.ninja/api/v1/shorten" \
   -X POST -H "Content-Type:application/json" \
-  -d '{"uri":"https://example.com/longlongstuff"}'
+  -d '{"uri":"https://example.com/"}'
 ```
 
 > Response:
@@ -47,10 +47,10 @@ curl "https://api.abbr.ninja/api/v1/shorten" \
 
 ```json
 {
-  "id": "aJKjknR",
-  "html_safe_uri": "https://example.com/longlongstuff",
-  "raw_uri": "https://example.com/longlongstuff",
-  "encoded_uri": "https://example.com/longlongstuff"
+  "id": "UjqxAn7",
+  "html_safe_uri": "https://example.com/",
+  "raw_uri": "https://example.com/",
+  "encoded_uri": "https://example.com/"
 }
 ```
 
@@ -74,7 +74,7 @@ uri | The URI to be shorten.
 ## Retrieve Original URI
 
 ```shell
-curl "https://api.abbr.ninja/api/v1/retrieve?id=aJKjknR"
+curl "https://api.abbr.ninja/api/v1/retrieve?id=UjqxAn7"
 ```
 
 > Response:
@@ -83,9 +83,9 @@ curl "https://api.abbr.ninja/api/v1/retrieve?id=aJKjknR"
 
 ```json
 {
-  "html_safe_uri": "https://example.com/longlongstuff",
-  "raw_uri": "https://example.com/longlongstuff",
-  "encoded_uri": "https://example.com/longlongstuff"
+  "html_safe_uri": "https://example.com/",
+  "raw_uri": "https://example.com/",
+  "encoded_uri": "https://example.com/"
 }
 ```
 
